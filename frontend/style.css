@@ -1,0 +1,262 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* General container */
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+/* Auth container */
+.auth-container {
+  padding: 30px;
+  text-align: center;
+}
+
+.auth-container h1 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.tab {
+  flex: 1;
+  padding: 12px 0;
+  cursor: pointer;
+  background: #eee;
+  border: 1px solid #ddd;
+  border-bottom: none;
+  font-weight: 600;
+  color: #555;
+  transition: background 0.3s;
+}
+
+.tab.active {
+  background: #4285f4;
+  color: white;
+  font-weight: 700;
+  border-color: #4285f4;
+}
+
+.auth-form {
+  max-width: 300px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.auth-form input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.auth-form button {
+  padding: 10px;
+  background: #4285f4;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.auth-form button:hover {
+  background: #3367d6;
+}
+
+.hidden {
+  display: none;
+}
+
+.message {
+  margin-top: 15px;
+  color: red;
+  font-weight: 600;
+}
+
+/* Chat layout */
+.chat-container {
+  display: flex;
+  height: 600px;
+  overflow: hidden;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 280px;
+  background: #f7f9fc;
+  border-right: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  border-bottom: 1px solid #ddd;
+  background: #4285f4;
+  color: white;
+}
+
+#logout-btn {
+  background: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: color 0.3s;
+}
+
+#logout-btn:hover {
+  color: #d9534f;
+}
+
+#user-search {
+  padding: 12px 15px;
+  border: none;
+  border-bottom: 1px solid #ddd;
+  font-size: 1rem;
+}
+
+#user-list {
+  list-style: none;
+  overflow-y: auto;
+  flex-grow: 1;
+}
+
+#user-list li {
+  padding: 12px 20px;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+#user-list li:hover, #user-list li.selected {
+  background: #dbe7ff;
+}
+
+/* Chat main */
+.chat-main {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+}
+
+.chat-header {
+  padding: 15px 20px;
+  border-bottom: 1px solid #ddd;
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: #444;
+}
+
+.chat-messages {
+  flex-grow: 1;
+  padding: 20px;
+  overflow-y: auto;
+  background: #f4f6fb;
+}
+
+.message-bubble {
+  max-width: 60%;
+  padding: 12px 15px;
+  margin-bottom: 15px;
+  border-radius: 20px;
+  line-height: 1.3;
+  font-size: 1rem;
+  position: relative;
+  word-wrap: break-word;
+}
+
+.message-bubble.self {
+  background: #4285f4;
+  color: white;
+  margin-left: auto;
+  border-bottom-right-radius: 5px;
+}
+
+.message-bubble.other {
+  background: #e4e6eb;
+  color: #333;
+  margin-right: auto;
+  border-bottom-left-radius: 5px;
+}
+
+.message-timestamp {
+  font-size: 0.7rem;
+  color: #777;
+  margin-top: 5px;
+  text-align: right;
+}
+
+/* Message form */
+.message-form {
+  display: flex;
+  padding: 10px 20px;
+  border-top: 1px solid #ddd;
+  background: white;
+}
+
+#message-input {
+  flex-grow: 1;
+  padding: 12px 15px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  outline: none;
+  margin-right: 10px;
+}
+
+.message-form button {
+  background: #4285f4;
+  border: none;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.message-form button:hover {
+  background: #3367d6;
+}
+
+/* Scrollbar for messages and user list */
+#user-list::-webkit-scrollbar,
+.chat-messages::-webkit-scrollbar {
+  width: 8px;
+}
+
+#user-list::-webkit-scrollbar-thumb,
+.chat-messages::-webkit-scrollbar-thumb {
+  background-color: rgba(66, 133, 244, 0.5);
+  border-radius: 4px;
+}
+
+#user-list::-webkit-scrollbar-track,
+.chat-messages::-webkit-scrollbar-track {
+  background-color: transparent;
+}

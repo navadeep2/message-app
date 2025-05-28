@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Chat - Private Messaging App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container chat-container">
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <h2 id="current-username"></h2>
+        <button id="logout-btn" title="Logout">Logout</button>
+      </div>
+      <input type="text" id="user-search" placeholder="Search users..." autocomplete="off" />
+      <ul id="user-list"></ul>
+    </aside>
+
+    <main class="chat-main">
+      <div class="chat-header" id="chat-header">
+        <h3>Select a user to chat</h3>
+      </div>
+      <div class="chat-messages" id="chat-messages"></div>
+
+      <form id="message-form" class="message-form hidden">
+        <input
+          type="text"
+          id="message-input"
+          placeholder="Type a message..."
+          autocomplete="off"
+          required
+          minlength="1"
+        />
+        <button type="submit">Send</button>
+      </form>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
