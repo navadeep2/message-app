@@ -24,23 +24,13 @@ This project allows users to:
 1. Clone or download this repository.
 2. Install dependencies for both backend and frontend:
     ```sh
-    cd backend
-    npm install
-    cd ../frontend
     npm install
     ```
 3. Configure your environment variables (database, API keys, etc.) as needed.
-4. Start the backend server:
-    ```sh
-    cd backend
+4. Start the server
+   ```sh
     npm start
     ```
-5. Start the frontend development server:
-    ```sh
-    cd frontend
-    npm start
-    ```
-6. Open the frontend in your browser to use the app.
 
 ## Features
 
